@@ -1,0 +1,83 @@
+/*a:hover {
+    font-weight: bolder;
+}
+
+.nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 28px;
+    left: 20px;
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+*/
+
+
+.logo {
+    text-align: center;
+    padding: 2.6rem 1rem;
+}
+
+.log0 img {
+    width: 200px;
+}
+
+.mat-icon {
+    vertical-align: center;
+    margin-right: 1rem;
+}
+
+.mat-divider {
+    border-top-width: 2px;
+}
+
+.mat-list-item {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    margin: 0 8px;
+    color: #2e2e2e;
+}
+
+.mat-list-item:hover {
+    background: #009AEE;
+    color: white;
+}

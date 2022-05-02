@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Angular Material Modules
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -19,8 +20,9 @@ import { MountainDetailComponent } from './mountain-detail/mountain-detail.compo
 import { MountainsComponent } from './mountains/mountains.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MapComponent } from './map/map.component';
-
 import { ComparisonMatrixComponent } from './comparison-matrix/comparison-matrix.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -31,12 +33,15 @@ import { ComparisonMatrixComponent } from './comparison-matrix/comparison-matrix
     DashboardComponent,
     MapComponent,
     ComparisonMatrixComponent,
+    SidenavComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     FontAwesomeModule,
+    BrowserAnimationsModule,
     // Material Imports
     MatSidenavModule,
     MatToolbarModule, 

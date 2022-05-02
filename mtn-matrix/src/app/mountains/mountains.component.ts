@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Mountain } from '../mountain';
 import { MountainService } from '../services/mountain.service';
 

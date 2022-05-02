@@ -1,33 +1,9 @@
-<nav>
-  <div class="navbar">
-    <div class="nav-container">
-        <input class="checkbox" type="checkbox" name="nav-checkbox" id="nav-checkbox" />
-        <div class="hamburger-lines">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
-        </div>  
-        <div class="logo">
-          <h1>{{title}}</h1>
-          <!-- <img class="logo" alt="app logo" src="../assets/images/Color1.svg" height="75" width="75"> -->
-        </div>
-      <div class="menu-items">
-        <li><a routerLink="/dashboard">Dashboard</a></li>
-        <li><a routerLink="/mountains">Mountains</a></li>
-        <li><a routerLink="/map">Map</a></li>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<!--
-  <mat-drawer-container>
+<mat-drawer-container>
   <mat-drawer mode="side" opened="true">
-      <app-sidenav></app-sidenav>
+    <app-sidenav></app-sidenav>
   </mat-drawer>
   <mat-drawer-content>
-      
+    <app-header></app-header>
+    <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
--->
-<router-outlet></router-outlet>

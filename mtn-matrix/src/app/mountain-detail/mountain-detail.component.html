@@ -4,8 +4,7 @@
 <div *ngIf="mountain">
     <h2>{{mountain.name | uppercase}} Details</h2>
     <div>
-      <label for="mountain-name">Mountain name: </label>
-      <input id="mountain-name" [(ngModel)]="mountain.name" placeholder="name"/>
+      <p class="mountain-detail"><strong>Mountain name: </strong>{{mountain.name}}</p>
       <p class="mountain-detail"><strong>Vertical: </strong>{{mountain.vertical}} ft</p>
       <p class="mountain-detail"><strong>Resort address: </strong>{{mountain.address}}</p>
       <p class="mountain-detail"><strong>Skiable area: </strong>{{mountain.skiableArea}} acres </p>
