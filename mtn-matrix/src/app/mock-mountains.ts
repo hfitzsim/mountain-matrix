@@ -1,0 +1,31 @@
+import { Mountain } from './mountain';
+
+export const MOUNTAINS: Mountain[] = [
+  { id: 11, name: 'Pats Peak', vertical: 710, address: '686 Flanders Rd, Henniker, NH 03242', skiableArea: 90, coordinates: {latitude: 43.1640, longitude: -71.7977}},
+  { id: 12, name: 'Crotched', vertical: 1016, address: '615 Francestown Rd, Bennington, NH 03442', skiableArea: 100, coordinates: {latitude: 43.0120, longitude: -71.8789}},
+  { id: 13, name: 'Killington', vertical: 3050, address: '3861 Killington Rd, Killington, VT 05751', skiableArea: 1509, coordinates: {latitude: 43.6263, longitude: -72.7968}},
+  { id: 14, name: 'Stowe', vertical: 2360, address: '5781 Mountain Rd, Stowe, VT 05672', skiableArea: 485, coordinates: {latitude: 44.5303, longitude: -72.7814}},
+  { id: 15, name: 'Jay Peak', vertical: 2153, address: '830 Jay Peak Rd, Jay, VT 05859', skiableArea: 385, coordinates: {latitude: 44.9379, longitude: -72.5048}},
+  { id: 16, name: 'Blue Hills', vertical: 309, address: '4001 Washington St, Canton, MA 02021', skiableArea: 60, coordinates: {latitude: 42.2160, longitude: -71.1191}},
+  { id: 17, name: 'Bretton Woods', vertical: 1500, address: '99 Ski Area Rd, Bretton Woods, NH 03575', skiableArea: 464, coordinates: {latitude: 44.2593, longitude: -71.4602}},
+  { id: 18, name: 'Attitash', vertical: 1750, address: '775 US-302, Bartlett, NH 03812', skiableArea: 310, coordinates: {latitude: 44.0828, longitude: -71.2294}},
+  { id: 19, name: 'Wildcat', vertical: 2112, address: '542 NH-16, Gorham, NH 03581', skiableArea: 225, coordinates: {latitude: 44.2641, longitude: -71.2393}},
+  { id: 20, name: 'Cannon', vertical: 2180, address: '2650 Profile Rd, Fanconia, NH, 03580', skiableArea: 285, coordinates: {latitude: 44.1774, longitude: -71.7018}},
+  { id: 21, name: 'Whistler', vertical: 5020, address: '4545 Blackcomb way, Whistler, BC V0N 1B4, Canada', skiableArea: 4757, coordinates: {latitude: 50.1162, longitude: -122.9535}},
+  { id: 22, name: 'Mount Snow', vertical: 1700, address: '39 Mount Snow Rd, West Dover, VT 05356', skiableArea: 600, coordinates: {latitude: 42.9602, longitude: -72.9204}},
+  { id: 23, name: 'Okemo', vertical: 2200, address: '77 Okemo Ridge Rd, Ludlow, VT 05149', skiableArea: 677, coordinates: {latitude: 43.4018, longitude: -72.7170}},
+  { id: 24, name: 'Loon', vertical: 2109, address: '60 Loon Mountain Rd, Lincoln, NH 03251', skiableArea: 632, coordinates: {latitude: 44.0563, longitude: -71.6336}},
+  { id: 25, name: 'Cranmore', vertical: 1200, address: '239 Skimobile Rd, North Conway, NH 03860', skiableArea: 200, coordinates: {latitude: 44.0565, longitude: -71.1101}},
+  { id: 26, name: 'Sugarloaf', vertical: 2820, address: '5092 Sugarloaf, Access Rd, Carrabasset Valley, ME 04947', skiableArea: 1240, coordinates: {latitude: 45.0541, longitude: -70.3085}},
+  { id: 27, name: 'Gunstock', vertical: 1400, address: '719 Cherry Valley Rd, Gilford, NH 03249', skiableArea: 227, coordinates: {latitude: 43.5411, longitude: -71.3629}},
+  { id: 28, name: 'Magic Mountain', vertical: 1500, address: '495 Magic Mountain Acc, Londonderry, VT 05148', skiableArea: 195, coordinates: {latitude: 43.2018, longitude: -72.7726}},
+  { id: 29, name: 'Sunapee', vertical: 1510, address: '1398 New Hampshire Rte 103, Newbury, NH 03255', skiableArea: 233, coordinates: {latitude: 43.3314, longitude: -72.0805}},
+  { id: 30, name: 'Sunday River', vertical: 2340, address: '15 S Ridge Rd, Newry, ME 04261', skiableArea: 870, coordinates: {latitude: 44.4734, longitude: -70.8569}},
+  { id: 31, name: 'Berkshire East', vertical: 1180, address: '66 Thunder Mountain Rd, Charlemont, MA 01339', skiableArea: 180, coordinates: {latitude: 42.6211, longitude: -72.8771}},
+  { id: 32, name: 'Bolton Valley', vertical: 1704, address: '4302 Bolton Access Rd, Richmond, VT 05477', skiableArea: 300, coordinates: {latitude: 44.4224, longitude: -72.8513}},
+  { id: 33, name: 'Wachusett', vertical: 1000, address: '41 Mile Hill Rd, Westminster, MA 01473', skiableArea: 110, coordinates: {latitude: 42.5109, longitude: -71.8883}}, 
+  { id: 34, name: 'Stratton', vertical: 2003, address: '5 Village Lodge Rd, Stratton Mountain, VT 05155', skiableArea: 670, coordinates: {latitude: 43.1134, longitude: -72.9081}},
+  { id: 35, name: 'Sugarbush', vertical: 2650, address: '102 Forest Dr, Warren, VT 05674', skiableArea: 581, coordinates: {latitude: 44.1359, longitude: -72.8944}},
+  { id: 36, name: 'Ski Sundown', vertical: 625, address: '126 Ratlum Rd, New Hartford, CT 06057', skiableArea: 65, coordinates: {latitude: 41.8847, longitude: -72.9467}},
+  { id: 37, name: 'Blackcomb', vertical: 5280, address: '4545 Blackcomb way, Whistler, BC V0N 1B4, Canada', skiableArea: 3414, coordinates: {latitude: 50.1150, longitude: -122.9486}}
+];

@@ -1,0 +1,13 @@
+<div class="container map-view">
+    <div id="nearby-mtns">
+        <ul class="mountains">
+            <li *ngFor="let mountain of mountains">
+              <a routerLink="/detail/{{mountain.id}}">
+                <img src="../../assets/images/Color1.svg" height="50" width="50">
+                {{mountain.name}}
+              </a>
+            </li>
+          </ul>
+    </div>
+    <div id="map"></div>
+</div>

@@ -1,0 +1,41 @@
+<div class="sort-filter">
+  <div id="sort">
+    <h4>Sort <fa-icon [icon]="chevronDown"></fa-icon></h4>
+    <button>Vertical</button>
+    <button>Distance</button>
+  </div>
+  <div id="filter">
+    <h4>Filter <fa-icon [icon]="chevronDown"></fa-icon></h4>
+    <button>Epic</button>
+    <button>Ikon</button>
+    <button>Indy</button>
+  </div>
+</div>
+
+<div class="container">
+  <ul class="mountains">
+    <li class="card" *ngFor="let mountain of mountains">
+      <div>
+        <label for="compare-checkbox">Select to compare: </label>
+        <input type="checkbox" class="checkbox" name="compare-checkbox" id="compare-checkbox" tabindex="1">
+      </div>
+      
+        <h2 class="card-title">{{mountain.name}}</h2>
+        <div class="content">
+          <img src="../../assets/images/Color1.svg" height="50" width="50">
+          <p>{{mountain.address}}</p>
+        </div>
+       <div class="card-actions">
+         <!--
+        <button><img src="../../assets/images/heart-outline.svg" height="15" width="15"></button>
+        <button><img src="../../assets/images/share-icon.png" height="25" width="25"></button>
+         -->
+        <button>see more</button>
+         </div>
+    </li>
+  </ul>
+</div>
+
+<div style="position: fixed; bottom: 0; height: 55px; width: 100%; background-color: white; border-top: 1px solid #b4b4b4; display: flex; justify-content: flex-end; align-items: flex-end;">
+  <a routerLink="/comparison-matrix">This will take you to a new component not available in sidenav</a>
+</div>
