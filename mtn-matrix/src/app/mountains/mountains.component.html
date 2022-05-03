@@ -1,3 +1,4 @@
+<!--
 <div class="sort-filter">
   <div id="sort">
     <h4>Sort <fa-icon [icon]="chevronDown"></fa-icon></h4>
@@ -11,31 +12,30 @@
     <button>Indy</button>
   </div>
 </div>
-
+-->
 <div class="container">
-  <ul class="mountains">
-    <li class="card" *ngFor="let mountain of mountains">
-      <div>
-        <label for="compare-checkbox">Select to compare: </label>
-        <input type="checkbox" class="checkbox" name="compare-checkbox" id="compare-checkbox" tabindex="1">
-      </div>
-      
-        <h2 class="card-title">{{mountain.name}}</h2>
-        <div class="content">
-          <img src="../../assets/images/Color1.svg" height="50" width="50">
+    <ul class="mountains">
+      <li *ngFor="let mountain of mountains">
+        <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title class="card-title">{{mountain.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://dam-assets.vailresorts.com/is/image/vailresorts/CM_Winter_11?resMode=sharp2&wid=400&fit=constrain,1&dpr=on,2" alt="testing with logo" >
+        <mat-card-content>
           <p>{{mountain.address}}</p>
-        </div>
-       <div class="card-actions">
-         <!--
-        <button><img src="../../assets/images/heart-outline.svg" height="15" width="15"></button>
-        <button><img src="../../assets/images/share-icon.png" height="25" width="25"></button>
-         -->
-        <button>see more</button>
-         </div>
-    </li>
-  </ul>
+        </mat-card-content>
+        <mat-card-actions>
+          <a routerLink="/detail/{{mountain.id}}">see more <fa-icon [icon]="chevronDown"></fa-icon></a>
+        </mat-card-actions>
+      </mat-card>
+     </li>
+    </ul>
 </div>
 
-<div style="position: fixed; bottom: 0; height: 55px; width: 100%; background-color: white; border-top: 1px solid #b4b4b4; display: flex; justify-content: flex-end; align-items: flex-end;">
+<!--
+<div
+  style="position: fixed; bottom: 0; height: 55px; width: 100%; background-color: white; border-top: 1px solid #b4b4b4; display: flex; justify-content: flex-end; align-items: flex-end;">
   <a routerLink="/comparison-matrix"><button>Compare Mountains</button>></a>
 </div>
+-->

@@ -5,11 +5,17 @@
 }
 
 mat-drawer {
-    width: 260px;
+    width: 20%;
     background-color: white;
     box-shadow: 0 1px 4px #b4b4b4;
 }
 
 mat-drawer-container {
     height: 100%;
+}
+
+@media (max-width: 730px) {
+    mat-drawer {
+        display: none;
+    }
 }

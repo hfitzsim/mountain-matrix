@@ -2,8 +2,9 @@ div#nearby-mtns {
     padding: 10px;
     height: 100%;
     width: 300px;
-    border: 1px dotted black;
+    border: none;
     background-color: white;
+    box-shadow: 0 1px 4px #b4b4b4;
 }
 
 ul li {
