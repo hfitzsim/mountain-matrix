@@ -4,7 +4,8 @@
   font-family: "Poppins", sans-serif;
 }
 #search {
-  width: 77vw; box-shadow: 0 4px 8px #696969;
+  width: 77vw; box-shadow: 0 4px 8px #b4b4b4;
+  border: 0;
 }
 #pathToCompare {
   display: none;

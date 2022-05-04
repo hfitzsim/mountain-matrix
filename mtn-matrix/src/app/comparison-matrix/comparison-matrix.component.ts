@@ -3,6 +3,8 @@ import { Mountain } from '../mountain';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { MountainService } from '../services/mountain.service';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-comparison-matrix',
@@ -10,6 +12,7 @@ import { MountainService } from '../services/mountain.service';
   styleUrls: ['./comparison-matrix.component.css']
 })
 export class ComparisonMatrixComponent implements OnInit {
+  chevronLeft = faChevronLeft;
 
   mountains: Mountain[] = [];
   @Input() mountain: Mountain | undefined;

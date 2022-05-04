@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Mountain Matrix';
-  openState = true;
-
-  sidenavToggle() {
-    this.openState = !this.openState;
-  }
 }

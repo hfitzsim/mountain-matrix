@@ -18,7 +18,6 @@ h1 {
     justify-content: space-between;
     font-family: "Poppins", sans-serif;
     padding-bottom: 1rem;
-    margin-bottom: 1rem;
     box-shadow: 0 0 4px #696969;
 }
 
@@ -27,5 +26,5 @@ button {
     top: 30px;
     background: transparent;
     opacity: 100;
-    color: black;
+    color: white;
 }

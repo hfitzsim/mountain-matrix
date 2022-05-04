@@ -34,8 +34,12 @@ mat-select {
 }
 
 .compare-img {
-    max-width: 100%;
+    width: 100%;
     min-height: 100px;
     max-height: 300px;
     overflow: hiddne;
+}
+
+#right {
+    margin-left: 0.5em;
 }

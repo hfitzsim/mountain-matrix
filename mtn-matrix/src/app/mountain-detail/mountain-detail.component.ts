@@ -3,6 +3,7 @@ import { Mountain } from '../mountain';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { MountainService } from '../services/mountain.service';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-mountain-detail',
@@ -10,6 +11,7 @@ import { MountainService } from '../services/mountain.service';
   styleUrls: ['./mountain-detail.component.css']
 })
 export class MountainDetailComponent implements OnInit {
+  chevronLeft = faChevronLeft;
 
   @Input() mountain: Mountain | undefined;
   

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Mountain } from '../mountain';
 import { MountainService } from '../services/mountain.service';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { Location } from '@angular/common';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+
+
 
 @Component({
   selector: 'app-mountains',
@@ -9,12 +12,15 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./mountains.component.css']
 })
 export class MountainsComponent implements OnInit {
-  chevronDown = faChevronDown;
+  searched: string = "";
+
+  chevronLeft=faChevronLeft;
   mountains: Mountain[] = [];
   panelOpenState = false;
   selected=true;
 
-  constructor(private mountainService: MountainService) { }
+  constructor(private mountainService: MountainService,
+    private location: Location) { }
 
   ngOnInit(): void {
     this.getMountains();
@@ -24,5 +30,11 @@ export class MountainsComponent implements OnInit {
     this.mountainService.getMountains()
     .subscribe(mountains => this.mountains = mountains);
   }
+
+  goBack(): void {
+    this.location.back();
+  }
+
+  filterByPass() {}
 
 }

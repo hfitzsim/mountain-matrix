@@ -21,10 +21,4 @@ export class DashboardComponent implements OnInit {
     .subscribe(mountains => this.mountains = mountains.slice(0,10));
   }
 
-  getClosestMountains(): void {
-    this.mountainService.getMountains()
-    .subscribe(mountains => this.mountains = mountains.slice(11,37));
-    console.log("calculate the shortest distance from user location to resorts");
-  }
-
 }

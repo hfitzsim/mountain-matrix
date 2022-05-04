@@ -11,7 +11,7 @@
 
 .mat-icon {
     vertical-align: center;
-    margin-right: 0;
+    margin-right: 0.5em;
 }
 
 .mat-divider {
@@ -19,7 +19,7 @@
 }
 
 .mat-list-item {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-bottom: 4px;
     border-radius: 5px;
     margin: 0 8px;

@@ -1,14 +1,19 @@
+#search {
+    width: 77vw;
+    border: 0;
+    margin-bottom: 1em;
+  }
+
 div#nearby-mtns {
     height: 100%;
     width: 300px;
-    border: none;
+    border: 0;
     background-color: white;
     box-shadow: 0 1px 4px #b4b4b4;
 }
 
 ul li {
     list-style: none;
-
 }
 
 div#map {
@@ -19,12 +24,21 @@ div#map {
     box-shadow: 0 1px 4px #b4b4b4;
 
 }
+ul.mountains {
+    height: 100%;
+    width: 100%;
+}
 
 .container {
     height: 80%;
     width: 100%;
     display: flex;
     flex-direction: row;
+}
+
+ul {
+    padding-left: 0;
+    overflow: hidden;
 }
 
 @media (max-width: 600px) {
