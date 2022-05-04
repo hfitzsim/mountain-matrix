@@ -16,6 +16,6 @@ mat-drawer-container {
 
 @media (max-width: 730px) {
     mat-drawer {
-        display: none;
+        display: hidden;
     }
 }

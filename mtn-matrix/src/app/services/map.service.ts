@@ -17,9 +17,7 @@ export class MapService {
 
     navigator.geolocation.getCurrentPosition((position) => {
       const coords = [position.coords.latitude, position.coords.longitude];
-      console.log(
-        `lat: ${position.coords.latitude}, lon: ${position.coords.longitude}`
-      );
+
       let map = L.map('map').setView(coords, 8);
 
       L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGZpdHpzaW0iLCJhIjoiY2wybmozdzFsMHhjMjNiczMxcjYwN2FlbyJ9.eBnOgWl7LtvS_7gD6A8g9Q', {
@@ -39,9 +37,7 @@ export class MapService {
 
   watchPosition() {
     navigator.geolocation.watchPosition((position) => {
-      console.log(
-        `lat: ${position.coords.latitude}, lon: ${position.coords.longitude}`
-      );
+
     }, (err) => {
       console.log(err);
     }, {
@@ -51,7 +47,4 @@ export class MapService {
     })
   }
 
-  getNearbyResorts() {
-    
-  }
 }

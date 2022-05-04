@@ -1,10 +1,11 @@
 // MODULES
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 // Angular Material Modules
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -13,6 +14,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field'; 
+import { MatSelectModule } from '@angular/material/select';
+import { CdkAccordionModule } from '@angular/cdk/accordion';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
@@ -23,6 +28,7 @@ import { MapComponent } from './map/map.component';
 import { ComparisonMatrixComponent } from './comparison-matrix/comparison-matrix.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HeaderComponent } from './header/header.component';
+import { DataComponent } from './data.component';
 
 
 @NgModule({
@@ -35,10 +41,13 @@ import { HeaderComponent } from './header/header.component';
     ComparisonMatrixComponent,
     SidenavComponent,
     HeaderComponent,
+    DataComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
@@ -48,7 +57,11 @@ import { HeaderComponent } from './header/header.component';
     MatIconModule,
     MatDividerModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    CdkAccordionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,6 +10,7 @@ import { MountainService } from '../services/mountain.service';
 })
 export class MapComponent implements OnInit {
   mountains: Mountain[] = [];
+  panelOpenState = false;
 
 
   constructor(private mapService: MapService, private mountainService: MountainService) { }

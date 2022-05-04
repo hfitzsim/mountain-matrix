@@ -3,20 +3,31 @@
 * {
   font-family: "Poppins", sans-serif;
 }
-
-div.sort-filter, .sort-filter div.sort, .sort-filert div.filter {
-  display: flex;
+#search {
+  width: 77vw; box-shadow: 0 4px 8px #696969;
+}
+#pathToCompare {
+  display: none;
+  position: fixed; 
+  bottom: 0; 
+  height: 55px; 
+  width: 100%; 
+  background-color: white; 
+  box-shadow: 8px 0 0 0 #696969;
+  margin-top: 2em;
 }
 
 .container {
   width: 100%;
-  height: 100%;
+  height: auto;
+  margin: 1em 0 1em 0;
 }
 
 ul.mountains {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
+  margin-bottom: 2em;
 }
 
 ul.mountains li {
@@ -48,3 +59,8 @@ li a:visited {
   display: flex;
   justify-content: center;
 }
+
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+

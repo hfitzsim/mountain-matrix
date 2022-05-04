@@ -12,7 +12,7 @@ import { MountainService } from '../services/mountain.service';
 export class MountainDetailComponent implements OnInit {
 
   @Input() mountain: Mountain | undefined;
-
+  
   constructor(
     private route: ActivatedRoute,
     private mountainService: MountainService,

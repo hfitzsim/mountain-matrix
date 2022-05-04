@@ -1,5 +1,36 @@
-
 <button type="button" (click)="goBack()">go back</button>
 
-
-<p>comparison-matrix works!</p>
+<div class="container">
+  <div class="selection-container">
+    <mat-form-field>
+      <mat-label>Select resort</mat-label>
+      <mat-select class="mountains" [(value)]="selectedMountain0" name="mountain">
+        <mat-option *ngFor="let mountain of mountains" [value]="mountain">{{mountain.name | uppercase }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select resort</mat-label>
+      <mat-select class="mountains" [(value)]="selectedMountain1" name="mountain">
+        <mat-option *ngFor="let mountain of mountains" [value]="mountain">{{mountain.name | uppercase }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="comparison-section">
+    <div class="mountain-detail" *ngIf="selectedMountain0">
+      <img src="{{selectedMountain0.imgUrl}}" width="100%">
+      <p><strong>id: </strong>{{selectedMountain0.id}}</p>
+      <p><strong>Vertical: </strong>{{selectedMountain0.vertical}} ft</p>
+      <p><strong>Skiable area: </strong>{{selectedMountain0.skiableArea}} acres </p>
+      <p><strong>Resort address: </strong>{{selectedMountain0.address}}</p>
+      <p><strong>Gps coordinates: </strong>{{selectedMountain0.coordinates.latitude}}, {{selectedMountain0.coordinates.longitude}}</p>
+    </div>
+    <div class="mountain-detail" *ngIf="selectedMountain1">
+      <img src="{{selectedMountain1.imgUrl}}" width="100%" max-height="300px">
+      <p><strong>id: </strong>{{selectedMountain1.id}}</p>
+      <p><strong>Vertical: </strong>{{selectedMountain1.vertical}} ft</p>
+      <p><strong>Skiable area: </strong>{{selectedMountain1.skiableArea}} acres </p>
+      <p><strong>Resort address: </strong>{{selectedMountain1.address}}</p>
+      <p><strong>Gps coordinates: </strong>{{selectedMountain1.coordinates.latitude}}, {{selectedMountain1.coordinates.longitude}}</p>
+    </div>
+  </div>
+</div>

@@ -7,5 +7,14 @@ export interface Mountain {
     coordinates: {
       latitude: number;
       longitude: number
-    }
+    };
+    imgUrl: string;
+    siteUrl: string;
+    avgAnnualSnow: number;
+    totalTrails: number;
+    lifts: number;
+    snowmaking: string;
+    terrainParks: number;
+    nightSkiing: string;
+    seasonpass: string;
   }

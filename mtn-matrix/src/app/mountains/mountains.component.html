@@ -1,41 +1,48 @@
-<!--
-<div class="sort-filter">
-  <div id="sort">
-    <h4>Sort <fa-icon [icon]="chevronDown"></fa-icon></h4>
-    <button>Vertical</button>
-    <button>Distance</button>
-  </div>
-  <div id="filter">
-    <h4>Filter <fa-icon [icon]="chevronDown"></fa-icon></h4>
-    <button>Epic</button>
-    <button>Ikon</button>
-    <button>Indy</button>
-  </div>
-</div>
--->
 <div class="container">
-    <ul class="mountains">
-      <li *ngFor="let mountain of mountains">
-        <mat-card>
+  <input type="text" id="search" placeholder="Search...">
+  <mat-accordion>
+    <mat-expansion-panel (opened)="panelOpenState=true" (closed)="panelOpenState=false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Sort
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <button>Vertical</button>
+      <button>Distance</button>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel (opened)="panelOpenState=true" (closed)="panelOpenState=false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Filter
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <button>Epic</button>
+      <button>Ikon</button>
+      <button>Indy</button>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+<div class="container">
+  <ul class="mountains">
+    <li *ngFor="let mountain of mountains">
+      <mat-card >
         <mat-card-header>
           <div mat-card-avatar class="header-image"></div>
           <mat-card-title class="card-title">{{mountain.name}}</mat-card-title>
         </mat-card-header>
-        <img mat-card-image src="https://dam-assets.vailresorts.com/is/image/vailresorts/CM_Winter_11?resMode=sharp2&wid=400&fit=constrain,1&dpr=on,2" alt="testing with logo" >
+        <img mat-card-image
+          src="https://dam-assets.vailresorts.com/is/image/vailresorts/CM_Winter_11?resMode=sharp2&wid=400&fit=constrain,1&dpr=on,2"
+          alt="snowboarder riding snowboard down mountain kicking up powder">
         <mat-card-content>
           <p>{{mountain.address}}</p>
         </mat-card-content>
         <mat-card-actions>
-          <a routerLink="/detail/{{mountain.id}}">see more <fa-icon [icon]="chevronDown"></fa-icon></a>
+          <button mat-button routerLink="/detail/{{mountain.id}}">see details </button>
+          <input type="checkbox" class="compare-checkbox" id="{{mountain.id}}" ng-checked="selected">
         </mat-card-actions>
       </mat-card>
-     </li>
-    </ul>
+    </li>
+  </ul>
 </div>
-
-<!--
-<div
-  style="position: fixed; bottom: 0; height: 55px; width: 100%; background-color: white; border-top: 1px solid #b4b4b4; display: flex; justify-content: flex-end; align-items: flex-end;">
-  <a routerLink="/comparison-matrix"><button>Compare Mountains</button>></a>
-</div>
--->

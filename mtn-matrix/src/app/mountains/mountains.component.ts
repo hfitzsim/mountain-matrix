@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Mountain } from '../mountain';
 import { MountainService } from '../services/mountain.service';
-
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -12,6 +11,8 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 export class MountainsComponent implements OnInit {
   chevronDown = faChevronDown;
   mountains: Mountain[] = [];
+  panelOpenState = false;
+  selected=true;
 
   constructor(private mountainService: MountainService) { }
 

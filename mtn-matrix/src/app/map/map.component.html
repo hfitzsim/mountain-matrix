@@ -1,13 +1,20 @@
 <div class="container map-view">
-    <div id="nearby-mtns">
-        <ul class="mountains">
-            <li *ngFor="let mountain of mountains">
-              <a routerLink="/detail/{{mountain.id}}">
+  <div id="nearby-mtns">
+    <mat-accordion>
+      <ul class="mountains">
+        <li *ngFor="let mountain of mountains">
+          <mat-expansion-panel (opened)="panelOpenState=true" (closed)="panelOpenState=false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
                 <img src="../../assets/images/Color1.svg" height="50" width="50">
                 {{mountain.name}}
-              </a>
-            </li>
-          </ul>
-    </div>
-    <div id="map"></div>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <a routerLink="/detail/{{mountain.id}}">See Information</a>
+          </mat-expansion-panel>
+        </li>
+      </ul>
+    </mat-accordion>
+  </div>
+  <div id="map"></div>
 </div>
