@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MapService } from '../services/map.service';
 import { Mountain } from '../mountain';
 import { MountainService } from '../services/mountain.service';
 import { Location } from '@angular/common';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { MOUNTAINS } from '../mock-mountains';
 
 
 @Component({
@@ -12,6 +13,9 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
+
+  @Input() mountain: Mountain | undefined;
+
   mountains: Mountain[] = [];
   searched: string = "";
   chevronLeft=faChevronLeft;
@@ -21,8 +25,11 @@ export class MapComponent implements OnInit {
     private location: Location) { }
 
   ngOnInit(): void {
-    this.mapService.createMap();
+    this.createMap();
     this.getMountains();
+
+
+    //this.mapService.distanceBetween();
   }
 
   getMountains(): void {
@@ -30,12 +37,13 @@ export class MapComponent implements OnInit {
     .subscribe(mountains => this.mountains = mountains);
   }
 
+
   goBack(): void {
     this.location.back();
   }
 
-  addMarker() {
-    console.log('add marker for the clicked mountain card');
+  createMap() {
+    this.mapService.createMap();
   }
 
 }

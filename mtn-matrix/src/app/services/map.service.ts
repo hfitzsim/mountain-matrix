@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { MOUNTAINS } from '../mock-mountains';
+import { Mountain } from '../mountain';
 
 declare const L: any;
 
@@ -6,6 +8,7 @@ declare const L: any;
   providedIn: 'root'
 })
 export class MapService {
+
 
   constructor() { }
 
@@ -17,7 +20,7 @@ export class MapService {
     navigator.geolocation.getCurrentPosition((position) => {
       const coords = [position.coords.latitude, position.coords.longitude];
 
-      let map = L.map('map').setView(coords, 8);
+      let map = L.map('map').setView(coords, 5);
 
       L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGZpdHpzaW0iLCJhIjoiY2wybmozdzFsMHhjMjNiczMxcjYwN2FlbyJ9.eBnOgWl7LtvS_7gD6A8g9Q', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -30,10 +33,20 @@ export class MapService {
 
       let marker = L.marker(coords).addTo(map);
       marker.bindPopup('<b>Your Location</b>').openPopup();
+
+      this.addResortMarkers(map);
+
+      const sortMountains = MOUNTAINS.forEach((m) => {
+        let currentDistance: number[] = [];
+        currentDistance += this.distanceBetween(m.coordinates.latitude, m.coordinates.longitude, position.coords.latitude, position.coords.longitude);
+        console.log(currentDistance);
+      })
     });
     this.watchPosition();
-    }
+  }
 
+
+  
   watchPosition() {
     navigator.geolocation.watchPosition((position) => {
 
@@ -46,28 +59,15 @@ export class MapService {
     })
   }
 
-  /*
-  
-  addMarker(lat, lng) {
+  distanceBetween(x1: any, y1: any, x2: any, y2: any): any {
+    const a = x2 - x1;
+    const b = y2 - y1;
 
-    let map = L.map('map').setView([lat,lng], 8);
-
-    let redIcon = new L.Icon({
-      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
-      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-      shadowSize: [41, 41]
-    });
-
-    L.marker([lat, lng], {icon: redIcon}).addTo(map);
-
+    const distance = Math.sqrt(a * a + b * b);
+    return distance;
   }
 
-  addMtnMarker() {
-
-    let map = L.map('map').setView({latitude: 43.1640, longitude: -71.7977}, 8);
+  addResortMarkers(myMap: any) {
 
     let redIcon = new L.Icon({
       iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
@@ -77,18 +77,75 @@ export class MapService {
       popupAnchor: [1, -34],
       shadowSize: [41, 41]
     });
+  
+    MOUNTAINS.forEach((m) => {
+      const lat = m.coordinates.latitude;
+      const lng = m.coordinates.longitude;
+  
+      let marker = L.marker([lat, lng], {icon: redIcon}).addTo(myMap);
+      marker.bindPopup(`<b>${m.name}</b>`).openPopup();
 
-
-    let mtnMarker = L.marker({latitude: 43.1640, longitude: -71.7977}, {icon: redIcon})
-    mtnMarker.bindPopup('Pats Peak', {
-      closeButton: true
     })
-
-    mtnMarker.addTo(this.map);
-  
   }
-  
-
-*/
 
 }
+
+
+
+
+/*
+
+ addMarker(mtnCoords) {
+
+   let map = L.map('map').setView([mtnCoords], 8);
+
+   let redIcon = new L.Icon({
+     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+     iconSize: [25, 41],
+     iconAnchor: [12, 41],
+     popupAnchor: [1, -34],
+     shadowSize: [41, 41]
+   });
+
+   L.marker(mtnCoords, {icon: redIcon}).addTo(map);
+ }
+ addMarker(lat, lng) {
+
+   let map = L.map('map').setView([lat,lng], 8);
+
+   let redIcon = new L.Icon({
+     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+     iconSize: [25, 41],
+     iconAnchor: [12, 41],
+     popupAnchor: [1, -34],
+     shadowSize: [41, 41]
+   });
+
+   L.marker([lat, lng], {icon: redIcon}).addTo(map);
+
+ }
+
+ addMtnMarker() {
+
+   let map = L.map('map').setView({latitude: 43.1640, longitude: -71.7977}, 8);
+
+   let redIcon = new L.Icon({
+     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+     iconSize: [25, 41],
+     iconAnchor: [12, 41],
+     popupAnchor: [1, -34],
+     shadowSize: [41, 41]
+   });
+
+   let mtnMarker = L.marker({latitude: 43.1640, longitude: -71.7977}, {icon: redIcon})
+   mtnMarker.bindPopup('Pats Peak', {
+     closeButton: true
+   })
+
+   mtnMarker.addTo(this.map);
+ 
+ }
+*/

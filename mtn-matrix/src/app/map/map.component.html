@@ -3,20 +3,5 @@
 </button>
 
 <div class="container map-view">
-  <div id="nearby-mtns">
-    <ul class="mountains">
-      <input type="text" id="search" placeholder="Search..." [(ngModel)]="searched">
-      <li *ngFor="let mountain of mountains | filter:searched">
-        <mat-card *ngIf="searched" (click)="addMarker()">
-          <mat-card-header>
-            <mat-card-title>
-              <img mat-card-img src="../../assets/images/Color1.svg" height="50" width="50">
-              {{mountain.name}}
-            </mat-card-title>
-          </mat-card-header>
-          </mat-card>
-      </li>
-    </ul>
-  </div>
   <div id="map"></div>
 </div>

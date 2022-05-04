@@ -30,7 +30,6 @@ import { MapComponent } from './map/map.component';
 import { ComparisonMatrixComponent } from './comparison-matrix/comparison-matrix.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HeaderComponent } from './header/header.component';
-import { DataComponent } from './data.component';
 
 
 @NgModule({
@@ -43,7 +42,6 @@ import { DataComponent } from './data.component';
     ComparisonMatrixComponent,
     SidenavComponent,
     HeaderComponent,
-    DataComponent,
   ],
   imports: [
     BrowserModule,
