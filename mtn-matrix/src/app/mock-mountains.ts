@@ -2,11 +2,11 @@ import { Mountain } from './mountain';
 
 export const MOUNTAINS: Mountain[] = [
   { id: 11, name: 'Pats Peak', vertical: 710, address: '686 Flanders Rd, Henniker, NH 03242', skiableArea: 90, coordinates: {latitude: 43.1640, longitude: -71.7977},
-   imgUrl: 'https://patspeak.com/getattachment/6b0acaa8-0e78-47cc-a156-f8c4b161156b/6b0acaa8-0e78-47cc-a156-f8c4b161156b.aspx', siteUrl: 'https://patspeak.com/', avgAnnualSnow: 100, totalTrails: 28, lifts: 11, snowmaking: '100%', terrainParks: 3, nightSkiing: 'yes', seasonpass: 'Indy'},
+   imgUrl: '/assets/images/pp-entrance-scaled.jpg', siteUrl: 'https://patspeak.com/', avgAnnualSnow: 100, totalTrails: 28, lifts: 11, snowmaking: '100%', terrainParks: 3, nightSkiing: 'yes', seasonpass: 'Indy'},
   { id: 12, name: 'Crotched', vertical: 1016, address: '615 Francestown Rd, Bennington, NH 03442', skiableArea: 100, coordinates: {latitude: 43.0120, longitude: -71.8789},
    imgUrl: 'https://dam-assets.vailresorts.com/is/image/vailresorts/CM-Hero-2?resMode=sharp2&wid=1425&fit=constrain,1&dpr=on,2', siteUrl: 'https://www.crotchedmtn.com/', avgAnnualSnow: 78, totalTrails: 25, lifts: 5, snowmaking: '100%', terrainParks: 3, nightSkiing: 'yes', seasonpass: 'Epic'},
   { id: 13, name: 'Killington', vertical: 3050, address: '3861 Killington Rd, Killington, VT 05751', skiableArea: 1509, coordinates: {latitude: 43.6263, longitude: -72.7968},
-   imgUrl: 'https://cms.killington.com/sites/killington/files/styles/default/public/2020-02/spring-pass-hero-image.jpg?itok=P1w0e3LJ', siteUrl: 'https://www.killington.com/', avgAnnualSnow: 250, totalTrails: 140, lifts: 22, snowmaking: '80%', terrainParks: 6, nightSkiing: 'no', seasonpass: ''},
+   imgUrl: '/assets/images/killington.jpg', siteUrl: 'https://www.killington.com/', avgAnnualSnow: 250, totalTrails: 140, lifts: 22, snowmaking: '80%', terrainParks: 6, nightSkiing: 'no', seasonpass: ''},
   { id: 14, name: 'Stowe', vertical: 2360, address: '7324 Mountain Rd, Stowe, VT 05672', skiableArea: 485, coordinates: {latitude: 44.5303, longitude: -72.7814},
    imgUrl: 'https://dam-assets.vailresorts.com/is/image/vailresorts/20200109_ST_SALVAS_010:Medium-Hero?resMode=sharp2&w=2880&h=750&wid=1425&fit=constrain,1&dpr=on,2', siteUrl: 'https://www.stowe.com/', avgAnnualSnow: 333, totalTrails: 116, lifts: 13, snowmaking: '80%', terrainParks: 3, nightSkiing: 'no', seasonpass: 'Epic'},
   { id: 15, name: 'Jay Peak', vertical: 2153, address: '830 Jay Peak Rd, Jay, VT 05859', skiableArea: 385, coordinates: {latitude: 44.9379, longitude: -72.5048},
@@ -18,7 +18,7 @@ export const MOUNTAINS: Mountain[] = [
   { id: 19, name: 'Wildcat', vertical: 2112, address: '542 NH-16, Jackson, NH 03846', skiableArea: 225, coordinates: {latitude: 44.2641, longitude: -71.2393},
    imgUrl: 'https://dam-assets.vailresorts.com/is/image/vailresorts/WC_Pow_Boarder_Hero?resMode=sharp2&wid=1425&fit=constrain,1&dpr=on,2', siteUrl: 'http://www.skiwildcat.com/', avgAnnualSnow: 200, totalTrails: 50, lifts: 8, snowmaking: '97%', terrainParks: 1, nightSkiing: 'no', seasonpass: 'Epic'},
   { id: 20, name: 'Cannon', vertical: 2180, address: '2650 Profile Rd, Fanconia, NH, 03580', skiableArea: 285, coordinates: {latitude: 44.1774, longitude: -71.7018},
-   imgUrl: '/assets/images/0C1E16E6-90EA-4329-97C6-913F8D01EE34.png', siteUrl: 'http://www.cannonmt.com/', avgAnnualSnow: 264, totalTrails: 72, lifts: 9, snowmaking: '', terrainParks: 3, nightSkiing: '', seasonpass: 'Indy'},
+   imgUrl: '/assets/images/cannon-mtn.webp', siteUrl: 'http://www.cannonmt.com/', avgAnnualSnow: 264, totalTrails: 72, lifts: 9, snowmaking: '', terrainParks: 3, nightSkiing: '', seasonpass: 'Indy'},
   { id: 21, name: 'Whistler', vertical: 5020, address: '4545 Blackcomb way, Whistler, BC V0N 1B4, Canada', skiableArea: 4757, coordinates: {latitude: 50.1162, longitude: -122.9535},
    imgUrl: 'https://dam-assets.vailresorts.com/is/image/vailresorts/Scenic_20171220_WB_mccolm_001_2000x600?resMode=sharp2&wid=801&fit=constrain,1&dpr=on,1', siteUrl: 'http://www.whistlerblackcomb.com/', avgAnnualSnow: 462, totalTrails: 200, lifts: 37, snowmaking: '655 acres', terrainParks: 5, nightSkiing: 'no', seasonpass: 'Epic'},
   { id: 22, name: 'Mount Snow', vertical: 1700, address: '39 Mount Snow Rd, West Dover, VT 05356', skiableArea: 600, coordinates: {latitude: 42.9602, longitude: -72.9204},
