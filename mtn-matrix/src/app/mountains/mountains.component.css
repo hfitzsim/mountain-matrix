@@ -52,7 +52,7 @@ li a:visited {
   align-items: center;
 }
 .header-image {
-  background-image: url('../../assets/images/Color1.svg');
+  background-image: url('/assets/images/Color1.svg');
   background-size: cover;
 }
 
