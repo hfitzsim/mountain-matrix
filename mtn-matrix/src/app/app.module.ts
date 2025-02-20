@@ -6,6 +6,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+
+// Third-party module
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 // Angular Material Modules
@@ -16,10 +18,10 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { MatFormFieldModule } from '@angular/material/form-field'; 
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
-import {CdkScrollableModule, ScrollingModule} from '@angular/cdk/scrolling'; 
+import { CdkScrollableModule, ScrollingModule } from '@angular/cdk/scrolling';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
@@ -62,8 +64,9 @@ import { HeaderComponent } from './header/header.component';
     MatFormFieldModule,
     MatSelectModule,
     CdkAccordionModule,
-    CdkScrollableModule, ScrollingModule,
-    Ng2SearchPipeModule
+    CdkScrollableModule, 
+    ScrollingModule,
+    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
